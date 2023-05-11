@@ -6,7 +6,7 @@ int main() {
 	int sum{0};
 	std::cin >> temp;
 	while(temp != 0) {
-		if (temp % 3 == 0 && temp % 10 == 8) {
+		if (temp % 7 == 0 && temp % 10 == 3) {
 
 			sum += temp;
 		}
