@@ -3,16 +3,14 @@
 
 int main() {
 	int temp{-1};
-	int max {2};
-	int n{0};
-	std::cin >> n;
-	for (int i = 0; i < n; ++i)
-	{
-		std::cin >> temp;
-		if (temp % 10 == 2 && temp > max) {
-			max = temp;
+	int summary {0};
+	std::cin >> temp;
+	while(temp != 0) {
+		if (temp % 4 == 0 && temp % 10 == 8) {
+			summary += temp;
 		}
+		std::cin >> temp;
 	}
-	std::cout << max;
+	std::cout << summary;
 	return 0;
 }
