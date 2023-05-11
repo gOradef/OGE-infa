@@ -3,18 +3,16 @@
 
 int main() {
 	int temp{-1};
-	int summary = 0;
+	int max {3};
 	int n{0};
-	std::cin >> temp;
-	while(temp != 0) {
-		if (temp % 2 == 0) {
-
-			summary += temp;
+	std::cin >> n;
+	for (int i = 0; i < n; ++i)
+	{
+		std::cin >> temp;
+		if (temp % 10 == 3 && temp > max) {
+			max = temp;
 		}
-		n++;
-
-	    std::cin >> temp;
 	}
-	std::cout << n << std::endl <<  summary;
+	std::cout << max;
 	return 0;
 }
