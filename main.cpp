@@ -2,16 +2,16 @@
 
 
 int main() {
-	int temp;
-	int sum{0};
+	int temp{-1};
+	int summary = 0;
 	std::cin >> temp;
 	while(temp != 0) {
-		if (temp % 7 == 0 && temp % 10 == 3) {
+		if (temp % 7 == 0) {
 
-			sum += temp;
+			summary++;
 		}
 	    std::cin >> temp;
 	}
-	std::cout << sum;
+	std::cout << summary;
 	return 0;
 }
