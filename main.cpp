@@ -6,9 +6,9 @@ int main() {
 	int summary = 0;
 	std::cin >> temp;
 	while(temp != 0) {
-		if (temp % 2 == 0 && temp % 5 == 0) {
+		if (temp % 6 == 0 && temp % 10 == 6) {
 
-			summary++;
+			summary += temp;
 		}
 	    std::cin >> temp;
 	}
