@@ -2,15 +2,25 @@
 
 
 int main() {
-	int temp{-1};
-	int summary {0};
-	std::cin >> temp;
-	while(temp != 0) {
-		if (temp % 4 == 0 && temp % 10 == 8) {
-			summary += temp;
-		}
+	int n{0};
+	int n_tmp;
+	double summary {0};
+	int temp;
+	std::cin >> n;
+	for (int i = 0; i < n; ++i)
+	{
 		std::cin >> temp;
+		summary += temp;
+		if (temp > 0)
+		{
+			n_tmp ++;
+		}
 	}
-	std::cout << summary;
+	summary = summary / n;
+	std::cout << summary << std::endl;
+	if (n_tmp >= 5) {
+		std::cout << "YES";
+	}
+	else std::cout << "NO";
 	return 0;
 }
