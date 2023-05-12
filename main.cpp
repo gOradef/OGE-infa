@@ -1,13 +1,15 @@
 #include <iostream>
-
+#include <cmath>
 
 int main() {
 using namespace std;
-	int temp{-1}, summary;
+	int temp{-1}, num_counter;
+	double summary {0};
 	while (temp != 0) {
-		if (temp % 5 == 0 || temp % 9 == 0) {summary ++;}
+		if (temp % 8 == 0) {summary += temp; num_counter++;}
 		cin >> temp;
 	}	
-	cout << summary;
+	summary = summary / num_counter;
+	if (summary == 0) {cout << "NO";} else cout << round(summary*10)/10;
 	return 0;
 }
