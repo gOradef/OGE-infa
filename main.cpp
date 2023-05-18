@@ -4,15 +4,12 @@
 int main() {
 	using namespace std;
 	
-	int n, temp, max{0};
-	bool isFailed;
+	int n, temp, count;
 	cin >> n;
-	for (int i{0};i < n; i++) {
+	for (int i{0}; i < n; i++) {
 		cin >> temp;
-		if (temp == 0) {isFailed = 0;}
-		if (temp > max) {max = temp;}
+		if (temp % 10 == 8 && temp % 6 == 0 ) {count++;}
 	}
-	cout << max << endl;
-	if (isFailed == 0) {cout << "YES";} else cout << "NO";
+	cout << count;
 	return 0;
 }
