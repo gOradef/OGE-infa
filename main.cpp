@@ -3,13 +3,11 @@
 
 int main() {
 using namespace std;
-	int n, temp, max {30000};
-	cin >> n;
-	for (int i = 0; i < n; ++i)
-	{
-		cin >> temp;
-		if (temp % 10 == 4 && temp < max) {max = temp;}
+	int temp{-1}, count{0};
+	while(temp != 0) {
+	    cin >> temp;
+	    if (temp > 9 && temp < 100 && temp % 8 == 0) {count++;}
 	}
-	cout << max;
+	cout << count;
 	return 0;
 }
