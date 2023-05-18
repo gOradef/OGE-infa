@@ -1,13 +1,21 @@
 #include <iostream>
-#include <cmath>
+
 
 int main() {
-using namespace std;
-	int temp{-1}, count{0};
-	while(temp != 0) {
-	    cin >> temp;
-	    if (temp > 9 && temp < 100 && temp % 8 == 0) {count++;}
+	int n, temp, countProb{0};
+	bool isPerfect;
+
+	std::cin >> n;
+	for (int i = 0; i < n; i++) {
+		std::cin >> temp;
+		if (temp == 10) {isPerfect = true;}
+		if (temp < 5) {countProb ++;}
 	}
-	cout << count;
+	std::cout << countProb << std::endl;
+	if (isPerfect == 1)
+	{
+		std::cout << "YES";
+	}
+	else {std::cout << "NO";}
 	return 0;
 }
