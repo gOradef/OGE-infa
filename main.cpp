@@ -4,12 +4,12 @@
 int main() {
 	using namespace std;
 	
-	int n, temp, count;
+	int n, temp, sum{0};
 	cin >> n;
 	for (int i{0}; i < n; i++) {
 		cin >> temp;
-		if (temp % 10 == 8 && temp % 6 == 0 ) {count++;}
+		if (temp % 10 == 4 && temp % 6 == 0 ) {sum += temp;}
 	}
-	cout << count;
+	cout << sum;
 	return 0;
 }
