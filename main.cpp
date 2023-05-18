@@ -4,12 +4,13 @@
 int main() {
 	using namespace std;
 	
-	int n, temp, sum{0};
-	cin >> n;
-	for (int i{0}; i < n; i++) {
-		cin >> temp;
-		if (temp % 10 == 4 && temp % 6 == 0 ) {sum += temp;}
+	int temp{-1}, count{0}; 
+	double summary;
+	while(temp != 0) {
+	    if (temp % 8 == 0) {summary += temp; count ++;}
+	    cin >> temp;
 	}
-	cout << sum;
+	summary = summary / count;
+	if (count == 0) {cout << "NO";} else cout << summary;
 	return 0;
 }
