@@ -3,14 +3,18 @@
 
 int main() {
 	using namespace std;
-	
-	int temp{-1}, count{0}; 
-	double summary;
-	while(temp != 0) {
-	    if (temp % 8 == 0) {summary += temp; count ++;}
-	    cin >> temp;
+
+	int n, temp, max {0};
+	bool isNoncorrect;
+
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> temp;
+		if (temp == 0) {isNoncorrect = 1;}
+		if (temp > max) {max = temp;}
 	}
-	summary = summary / count;
-	if (count == 0) {cout << "NO";} else cout << summary;
+	cout << max << endl;
+	if (isNoncorrect == 1) {cout << "YES";} else cout << "NO";
 	return 0;
 }
